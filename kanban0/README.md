@@ -17,7 +17,8 @@ Ajax
     <div class="kanban" data-kanbanid="2" data-disabled="">
     <div class="kanban" data-kanbanid="3" data-disabled="0,2">
 </div>
-    ```
+```
+    
 と記述します
 data-disabledには特定の看板からのドロップ禁止が指定できます。指定はkanbanidで指定します
 data-kanbanに看板のidを割振れます
