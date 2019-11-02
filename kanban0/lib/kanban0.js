@@ -38,7 +38,7 @@ export default class kanban0 {
             }, false);
 
             this.kanbans_[i].addEventListener('dragover', function(event){
-                event.target.appendChild
+                
             }, false);
         }
         
