@@ -25,6 +25,8 @@ Ajax
 data-disabledには特定の看板からのドロップ禁止が指定できます。指定はkanbanidで使用します
 また、data-kanbanに看板のidを割振れます。APIから看板を増やす場合は場合は一番おおきいid+1のidが割り振られます
 
+htmlでのidは各看板に`id="kanban-%d"`で割り振られます
+
 各種設定は(英語苦手なので説明は無理です)
 
 ```html
@@ -49,11 +51,15 @@ data-disabledには特定の看板からのドロップ禁止が指定できま�
 | setKanbanBakCol  | kanbanid,<br> color,<br> constant                                                   | constantに色を指定する場所を指定します。<br>HEADER,BODY,BORDER,ALL             |
 | setkanbanFontCol | kanbanid,<br> color,<br> constant                                                   | constantに色を指定する場所を指定します。<br>HEADER,BODY                        |
 | setEventItem     | itemid<br>eventName,<br> eventHander                                                | アイテムにイベントハンドラを追加します<br>drop,dragS,dragE,clickが指定できます |
-| addKanban        | title, <br>header-color,<br> back-color, <br>font-header-color, <br>font-body-color | Kanbanのタイトルとその他の色を指定します。                                     |
-| addItem          | kanbanid,<br>content, <br>font-color                                                | 追加先のkanbanidと内容を指定します                                             |
+| addKanban        | title, <br>header-color,<br> back-color, <br>font-header-color, <br>font-body-color | Kanbanを生成します。タイトルとその他の色を指定します。                         |
+| addItem          | kanbanid,<br>content, <br>font-color                                                | itemを追加します。追加先のkanbanidと内容を指定します                           |
 | getKanbanId      | itemid                                                                              | itemidに対する親要素のIDを取得します                                           |
-| getItemId        | kanbanid                                                                            | kanbanidに対する小要素のIDを取得します                                         |
-|                  |                                                                                     |                                                                                |
-|                  |                                                                                     |                                                                                |
+| getItemId        | kanbanid                                                                            | kanbanidに対する子要素のIDを取得します。配列を返します                         |
+| getAllItemId     |                                                                                     | 全てのitemのIDを取得します                                                     |
+| getAllKanbanId   |                                                                                     | 全てのkanbanのIDを取得します                                                   |
+| removeKanban     | kanbanid                                                                            | kanbanを削除します                                                             |
+| removeItem       | itemid                                                                              | itemを削除します                                                               |
+
+
 
     
