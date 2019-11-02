@@ -1,0 +1,25 @@
+@import url('color.css');
+
+.kanban-area{
+    display: flex;
+}
+
+.kanban{
+    margin: 5px;
+    min-width: 200px;
+}
+
+.kanban-title{
+    padding: 6px;
+    border-radius: 4px 4px 0 0;
+    font-size: 14px;
+    text-align: center;
+    color: var(--fff);
+    background: var(--col00);
+}
+
+.kanban-droparea{
+    min-height: 150px;
+    background: var(--col06);
+    border: 1px solid var(--col07);
+}

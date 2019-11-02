@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../lib/css/kanban0.css">
+        <script src="../lib/kanban0.js"></script>
+        <title>kanban0 - Sample</title>
+    </head>
+    <body>
+        <main>
+            <div class="kanban-area" data-kanbanarea="0">
+                <!--使用したい個数分かく -->
+                <div class="kanban" data-kanbanid="0" data-disabled="0"     data-title="０"></div>
+                <div class="kanban" data-kanbanid="1" data-disabled="0,1,2" data-title="１"></div>
+                <div class="kanban" data-kanbanid="2" data-disabled="0,1,2" data-title="２"></div>
+            </div>
+            <script>
+             var kanban_0 = new kanban0({
+                 ajax_mode    : false,                 //Ajaxで非同期通信する場合はtrue
+                 ajax_host    : "https://example.com", //Ajaxでのpost先
+                 form_mode    : false,                 //formを使うか
+                 form_action  : "/end_point",          //formのaction指定
+                 form_method  : "post"                 //formのmethot指定
+             });
+            </script>
+            <input type="text" id="text">
+            <button type="button" onclick="kanban_0.addKanban(document.getElementById('text').value, 0, '');">new kanban</button>
+            <button type="button" onclick="kanban_0.removeKanban(document.getElementById('text').value, 0);">remove kanban</button>
+        </main>
+    </body>
+</html>
