@@ -25,7 +25,8 @@ data-kanbanに看板のidを割振れます
 
 各種設定は(英語苦手なので説明は無理です)
 
-```<script>
+```
+<script>
     var kanban_0 = new kanban0({
         thema_type   : 0,            //you can change kanban thema color . thema_type : 0: nomal-thema-color, 1: for deuteranopia-color, 2:dark-thema-color -1: custom-thema-color (you need set thema-color by API).if you want to choose another thema-color ,you can use kanban API.
         ajax_mode    : false,        //if you want to use ajax, change ajax_mode: true
@@ -34,7 +35,8 @@ data-kanbanに看板のidを割振れます
         form_action  : "/end_point"
         form_method  : "post"
     });
-    </script>```
+</script>
+```
 
 で行えます。コンストラクタでできる設定は最低限なので各種メゾットを呼び出して自分で設定してください。
 以下にAPIを載せておきます
