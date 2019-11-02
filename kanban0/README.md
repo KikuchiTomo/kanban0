@@ -41,11 +41,13 @@ data-kanbanに看板のidを割振れます
 で行えます。コンストラクタでできる設定は最低限なので各種メゾットを呼び出して自分で設定してください。
 以下にAPIを載せておきます
 
-|Method          |Arguments                |desc|
----              |---                      |---
-|setKanbanBakCol |kanbanid, color, constant| constant: HEADER, BODY, BORDER, |
-|setkanbanFontCol|kanbanid, color, constant| constant: HEADER, BODY|
-|addKanban|title, header-color, back-color, font-header-color, font-body-color|fixed|
-|addKanbanItem|content, font-color|fixed|
+
+| Method           | Arguments                                                                           | desc                                    |
+|------------------|-------------------------------------------------------------------------------------|-----------------------------------------|
+| setKanbanBakCol  | kanbanid,<br> color,<br> constant                                                   | constant:<br>HEADER,<br>BODY,<br>BORDER |
+| setkanbanFontCol | kanbanid,<br> color,<br> constant                                                   | constant:<br>HEADER,<br>BODY            |
+| addKanban        | title, <br>header-color,<br> back-color, <br>font-header-color, <br>font-body-color | fixed                                   |
+| addKanbanItem    | itemid<br>content, <br>font-color                                                   | fixed                                   |
+| setEventItem     | itemid<br>eventName,<br> eventHander                                                | eventName:<br>drop <br>click            |
 
     
