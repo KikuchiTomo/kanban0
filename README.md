@@ -41,7 +41,7 @@ issueたててそのうち直します
 
 また、data-kanbanに看板のidを割振れます。APIから看板を増やす場合は場合は一番おおきいid+1のidが割り振られます
 
-htmlでのidは各看板に`id="kanban-%d"`で割り振られます
+htmlでのidは各看板に`id="kanban-%02d"`で割り振られます
 
 ### config
 
