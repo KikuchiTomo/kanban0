@@ -14,10 +14,10 @@ Ajax
 ```html
 <div class="kanban-area">
     <!--使用したい個数分かく -->
-    <div class="kanban" data-kanbanid="0" data-disabled="0">
-    <div class="kanban" data-kanbanid="1" data-disabled="0,1,2">
-    <div class="kanban" data-kanbanid="2" data-disabled="">
-    <div class="kanban" data-kanbanid="3" data-disabled="0,2">
+    <div class="kanban" data-kanbanid="0" data-disabled="0"     data-title="kanban0"></div>
+    <div class="kanban" data-kanbanid="1" data-disabled="0,1,2" data-title="kanban1"></div>
+    <div class="kanban" data-kanbanid="2" data-disabled=""      data-title="kanban2"></div>
+    <div class="kanban" data-kanbanid="3" data-disabled="0,2"   data-title="kanban3"></div>
 </div>
 ```
     
@@ -44,12 +44,16 @@ data-disabledには特定の看板からのドロップ禁止が指定できま�
 以下にAPIを載せておきます
 
 
-| Method           | Arguments                                                                           | desc                                    |
-|------------------|-------------------------------------------------------------------------------------|-----------------------------------------|
-| setKanbanBakCol  | kanbanid,<br> color,<br> constant                                                   | constant:<br>HEADER,<br>BODY,<br>BORDER |
-| setkanbanFontCol | kanbanid,<br> color,<br> constant                                                   | constant:<br>HEADER,<br>BODY            |
-| addKanban        | title, <br>header-color,<br> back-color, <br>font-header-color, <br>font-body-color | fixed                                   |
-| addKanbanItem    | itemid<br>content, <br>font-color                                                   | fixed                                   |
-| setEventItem     | itemid<br>eventName,<br> eventHander                                                | eventName:<br>drop <br>click            |
+| Method           | Arguments                                                                           | desc                                                                           |
+|------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| setKanbanBakCol  | kanbanid,<br> color,<br> constant                                                   | constantに色を指定する場所を指定します。<br>HEADER,BODY,BORDER,ALL             |
+| setkanbanFontCol | kanbanid,<br> color,<br> constant                                                   | constantに色を指定する場所を指定します。<br>HEADER,BODY                        |
+| setEventItem     | itemid<br>eventName,<br> eventHander                                                | アイテムにイベントハンドラを追加します<br>drop,dragS,dragE,clickが指定できます |
+| addKanban        | title, <br>header-color,<br> back-color, <br>font-header-color, <br>font-body-color | Kanbanのタイトルとその他の色を指定します。                                     |
+| addItem          | kanbanid,<br>content, <br>font-color                                                | 追加先のkanbanidと内容を指定します                                             |
+| getKanbanId      | itemid                                                                              | itemidに対する親要素のIDを取得します                                           |
+| getItemId        | kanbanid                                                                            | kanbanidに対する小要素のIDを取得します                                         |
+|                  |                                                                                     |                                                                                |
+|                  |                                                                                     |                                                                                |
 
     
