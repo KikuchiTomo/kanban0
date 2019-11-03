@@ -22,7 +22,7 @@ webアプリ用看板システム
 
 使用したい場所に
 ```html
-<div class="kanban-area" data-kanbanarea="0">>
+<div class="kanban-area" data-kanbanarea="0">
     <!--使用したい個数分かく -->
     <div class="kanban" data-kanbanid="0" data-disabled="0"     data-title="kanban0"></div>
     <div class="kanban" data-kanbanid="1" data-disabled="0,1,2" data-title="kanban1"></div>
@@ -35,8 +35,8 @@ webアプリ用看板システム
 
 data-disabledには特定の看板からのドロップをkanbanidで禁止が指定できます。
 
-怠けなのですがdata-kanbanidは*必ず重複させない*でください。Node順にidを割り振ってください。
-初期段階でdata-kanbanidに依存する設計にしてしまったので直すのだるいです。
+data-kanbanidは*必ず重複させない*でください。Node順にidを割り振ってください。
+
 issueたててそのうち直します
 
 また、data-kanbanに看板のidを割振れます。APIから看板を増やす場合は場合は一番おおきいid+1のidが割り振られます
@@ -56,7 +56,7 @@ htmlでのidは各看板に`id="kanban-%02d"`で割り振られます
 </script>
 ```
 
-で行えます。コンストラクタでできる設定は最低限なので各種メゾットを呼び出して自分で設定してください。
+またはAPIで行えます。コンストラクタでできる設定は最低限なので各種メゾットを呼び出して自分で設定してください。
 
 基本的な色の設定は`lib/css`直下の`color.css`にまとめて書いてあります
 全体的なthema-colorの設定を変えたい場合はcolor.cssに色の記述を直接いじってください。
