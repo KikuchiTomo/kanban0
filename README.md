@@ -31,7 +31,7 @@ webアプリ用看板システム
 </div>
 ```
     
-と記述します
+と記述します、なおコンストラクタでも指定できます。この場合コンストラクタの値が優先されます。
 
 data-disabledには特定の看板からのドロップをkanbanidで禁止が指定できます。
 
@@ -47,15 +47,22 @@ htmlでのidは各看板に`id="kanban-%02d"`で割り振られます
 
 各種設定は
 
+2019/11/30　追記__
+
+今後はこちらに変更します
 ```html
 <script>
     var kanban_0 = new kanban0({
-        ajax_mode    : false,                 //Ajaxで非同期通信する場合はtrue
-        ajax_host    : "https://example.com"  //Ajaxでのpost先
+        ajax_mode       : false,
+        ajax_host       : "https://example.com",
+        itemDelButton   : false,
+        itemAddButton   : false,
+        kanbanDelButton : false,
+        KnabanAddButton : false,
+        itemDragNG      : false
     });
 </script>
 ```
-
 またはAPIで行えます。コンストラクタでできる設定は最低限なので各種メゾットを呼び出して自分で設定してください。
 
 基本的な色の設定は`lib/css`直下の`color.css`にまとめて書いてあります
