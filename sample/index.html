@@ -10,17 +10,19 @@
         <main>
             <div class="kanban-area" data-kanbanarea="0">
                 <!--使用したい個数分かく -->
-                <div class="kanban" data-kanbanid="0" data-disabled="0"     data-title="０"></div>
-                <div class="kanban" data-kanbanid="1" data-disabled="0,1,2" data-title="１"></div>
-                <div class="kanban" data-kanbanid="2" data-disabled="0,1,2" data-title="２"></div>
+                <div class="kanban" data-kanbanid="0" data-disabled="0"     data-title="TODO"    data-color="#65bf6b"></div>
+                <div class="kanban" data-kanbanid="1" data-disabled="0,1,2" data-title="WORKING" data-color="#52d1af"></div>
+                <div class="kanban" data-kanbanid="2" data-disabled="0,1,2" data-title="DONE"    data-color="#cf5d5d"></div>
             </div>
             <script>
              var kanban_0 = new kanban0({
-                 ajax_mode    : false,                 //Ajaxで非同期通信する場合はtrue
-                 ajax_host    : "https://example.com", //Ajaxでのpost先
-                 form_mode    : false,                 //formを使うか
-                 form_action  : "/end_point",          //formのaction指定
-                 form_method  : "post"                 //formのmethot指定
+                 ajax_mode       : false,
+                 ajax_host       : "https://example.com",
+                 itemDelButton   : false,
+                 itemAddButton   : false,
+                 kanbanDelButton : false,
+                 KanbanAddButton : false,
+                 itemDragNG      : false
              });
             </script>
             <input type="text" id="text">
